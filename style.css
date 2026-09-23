@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;700;900&display=swap');
+
+/* GLOBAL VARIABLES */
+:root {
+    --primary-color: #FF6464;
+    --dark-color: #21243D;
+    --light-bg: #EDF7FA;
+    --text-color: #21243D;
+    --text-light: #8695A4;
+    --white: #FFFFFF;
+    --border-color: #E0E0E0;
+}
+
+/* RESET & BASE TYPOGRAPHY */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Heebo', sans-serif;
+    color: var(--text-color);
+    line-height: 1.6;
+    background-color: var(--white);
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* NAVIGATION */
+header {
+    padding: 30px 0;
+}
+nav {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    position: relative;
+}
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+.nav-links a {
+    font-weight: 500;
+    font-size: 20px;
+    color: #000;
+    transition: color 0.3s;
+}
+.nav-links a:hover, .nav-links a.active {
+    color: var(--primary-color);
+}
+.menu-toggle {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+    color: var(--dark-color);
+}
+
+/* MAIN CONTENT SPACING */
+.page-content {
+    min-height: 50vh; /* Keeps the footer pushed down even if the page is empty */
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 50px 20px;
+}
+.social-icons {
+    margin-bottom: 20px;
+}
+.social-icons a {
+    color: var(--dark-color);
+    font-size: 30px;
+    margin: 0 15px;
+    transition: color 0.3s;
+}
+.social-icons a:hover {
+    color: var(--primary-color);
+}
+footer p {
+    font-size: 14px;
+    color: var(--dark-color);
+}
+
+/* MOBILE RESPONSIVENESS (For Global Elements) */
+@media (max-width: 768px) {
+    nav {
+        justify-content: flex-end;
+    }
+    .menu-toggle {
+        display: block;
+    }
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 50px;
+        right: 0;
+        background: var(--white);
+        width: 100%;
+        text-align: right;
+        padding: 20px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        z-index: 100;
+    }
+    .nav-links.active-menu {
+        display: flex;
+    }
+}
