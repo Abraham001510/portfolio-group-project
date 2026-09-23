@@ -121,3 +121,73 @@ footer p {
         display: flex;
     }
 }
+/* =========================================
+   BLOG PAGE STYLES
+   ========================================= */
+
+.blog-page-title {
+    font-size: 44px;
+    font-weight: 900;
+    color: var(--dark-color);
+    margin-bottom: 40px;
+}
+
+.blog-post {
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+}
+
+.blog-post:last-child {
+    border-bottom: none;
+}
+
+.blog-post h2 {
+    font-size: 30px;
+    font-weight: 500;
+    color: var(--dark-color);
+    margin-bottom: 15px;
+}
+
+.blog-post h2 a:hover {
+    color: var(--primary-color);
+}
+
+.blog-meta {
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.blog-date {
+    color: var(--dark-color);
+}
+
+.blog-meta .divider {
+    margin: 0 15px;
+    color: var(--text-color);
+}
+
+.blog-tags {
+    color: var(--text-light);
+}
+
+.blog-post p {
+    font-size: 16px;
+    color: var(--text-color);
+}
+
+/* Blog Mobile Adjustments */
+@media (max-width: 768px) {
+    .blog-page-title {
+        font-size: 30px;
+        margin-bottom: 25px;
+    }
+    
+    .blog-post h2 {
+        font-size: 26px;
+    }
+    
+    .blog-meta {
+        font-size: 16px;
+    }
+}
