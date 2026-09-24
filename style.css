@@ -191,3 +191,103 @@ footer p {
         font-size: 16px;
     }
 }
+/* --- DESKTOP  (Min-width: 769px) --- */
+@media (min-width: 769px) {
+  /* Header & Navigation */
+  header.container {
+    padding: 27px 60px;
+    max-width: 1152px;
+    margin: 0 auto;
+  }
+  
+  .menu-toggle {
+    display: none; /* Hides your hamburger icon on desktop */
+  }
+  
+  .nav-links {
+    display: flex;
+    justify-content: flex-end;
+    gap: 33px;
+  }
+  
+  .nav-links a {
+    font-size: 20px;
+    font-weight: 500;
+    text-decoration: none;
+    color: #000000;
+  }
+  
+  .nav-links a:hover {
+    color: #FF6464;
+  }
+
+  /* Main Content Layout */
+  main.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 80px 20px 50px;
+  }
+
+  .blog-page-title {
+    font-size: 44px;
+    font-weight: 700;
+    margin-bottom: 55px;
+  }
+
+  /* Blog Post Formatting */
+  .blog-post {
+    padding: 32px 0;
+    border-bottom: 1px solid #E0E0E0;
+  }
+
+  .blog-post h2 a {
+    font-size: 30px;
+    font-weight: 500;
+    color: #21243D;
+    text-decoration: none;
+  }
+
+  .blog-meta {
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: #8695A4;
+  }
+
+  .blog-date {
+    color: #21243D;
+    padding-right: 25px;
+    border-right: 1px solid #000000;
+  }
+
+  .divider {
+    display: none; /* Partner uses a CSS border line instead of your | character */
+  }
+
+  .blog-tags {
+    padding-left: 25px;
+  }
+
+  .blog-post p {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #21243D;
+    max-width: 682px;
+  }
+
+  /* Footer */
+  footer {
+    padding: 130px 20px 54px;
+  }
+
+  .social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 35px;
+    margin-bottom: 26px;
+  }
+
+  .social-icons a {
+    font-size: 30px;
+    color: #21243D;
+  }
+}
