@@ -69,7 +69,7 @@ nav {
 
 /* MAIN CONTENT SPACING */
 .page-content {
-    min-height: 50vh; /* Keeps the footer pushed down even if the page is empty */
+    min-height: 50vh;
     padding-top: 40px;
     padding-bottom: 40px;
 }
@@ -121,6 +121,7 @@ footer p {
         display: flex;
     }
 }
+
 /* =========================================
    BLOG PAGE STYLES
    ========================================= */
@@ -188,6 +189,105 @@ footer p {
     }
     
     .blog-meta {
+        font-size: 16px;
+    }
+}
+
+/* =========================================
+   WORK PAGE STYLES
+   ========================================= */
+
+.work-page-title {
+    font-size: 44px;
+    font-weight: 900;
+    color: var(--dark-color);
+    margin-bottom: 40px;
+}
+
+.work-item {
+    display: flex;
+    gap: 30px;
+    padding-bottom: 35px;
+    margin-bottom: 35px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.work-item:last-child {
+    border-bottom: none;
+}
+
+.work-img {
+    width: 246px;
+    height: 180px;
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+.work-content {
+    flex: 1;
+}
+
+.work-content h2 {
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    line-height: 1.2;
+}
+
+.work-content h2 a:hover {
+    color: var(--primary-color);
+}
+
+.work-meta {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 15px;
+}
+
+.year-badge {
+    background-color: #142850;
+    color: var(--white);
+    padding: 2px 12px;
+    border-radius: 16px;
+    font-weight: 900;
+    font-size: 18px;
+}
+
+.category {
+    color: var(--text-light);
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.work-content p {
+    font-size: 16px;
+    color: var(--text-color);
+}
+
+/* Work Mobile Adjustments */
+@media (max-width: 768px) {
+    .work-page-title {
+        font-size: 30px;
+        margin-bottom: 20px;
+    }
+    
+    .work-item {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .work-img {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 4/3;
+    }
+    
+    .work-content h2 {
+        font-size: 24px;
+    }
+    
+    .work-meta {
         font-size: 16px;
     }
 }
